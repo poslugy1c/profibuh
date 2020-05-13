@@ -33,20 +33,27 @@
         &::placeholder{
             color: #90a4ae;
         }
+        &:active,  &:focus{
+            outline:none;
+        }
+
       }
-    button{
-        border: none;
-        background-color: $aqua;
-        color: #fff;
-        text-transform: uppercase;
-        border-radius: 8px;
-        padding: 0 15px;
-    }
+  
+}
+
+.main__btn{
+    border: none;
+    background-color: $aqua;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 8px;
+    padding: 0 15px;
 }
 
 .menu{
     display: flex;
     align-items: center;
+    margin-bottom: 45px;
 }
 
 .menu__list{
@@ -57,13 +64,12 @@
     }
     li{
         display: inline-block;
-        background-color: #957964;
+        background-color: $aqua;
         min-height: 65px;
         width: 14.2871%;   
         text-align: center;   
         & + li{
             border-left: 1px solid #fff;
-            background-color: $aqua;
         }
         &:first-child{
             border-top-left-radius: 9px; 
@@ -72,6 +78,9 @@
         &:last-child{
             border-top-right-radius: 9px; 
             border-bottom-right-radius: 9px;
+        }
+        &.active{
+            background-color: #957964; 
         }
     }
     a{
@@ -90,6 +99,83 @@
 
 
 // start slider
+.slider{
+    // border: 1px solid #000;
+}
+.slider__item{
+    min-height: 400px;
+    display: flex;
+    position: relative;
+    background-color: #fff;
+    // border: 1px solid #000;
+}
+.slider__img{
+    // border: 1px solid #000;
+    max-width: 400px;
+    width: 100%;
+    min-height: 330px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 35px;
+    left: 0px;
+}
+.slider__info{
+    position: absolute;
+    max-width: 390px;
+    min-height: 200px;
+    padding: 10px 0px 10px 0px;
+    bottom: 120px;
+    right: 0;
+    // border: 1px solid #000;
+    color: #fff;
+}
+.slider__info-title{
+    font-size: 36px;
+    line-height: 42px;
+    color: #957964;
+    padding-bottom: 26px;
+}
+.slider__info-text{
+    font-size: 16px;
+    color: $text;
+    margin-bottom: 35px;
+}
+.slider__btn{
+    min-height: 40px; 
+    min-width: 100px;
+}
 
+.slider{
+    // padding: 110px 0px 120px;
+    position: relative;
+    .slick-dots{
+        text-align: center;
+        // margin-top: 50px;
+        position: absolute;
+        right: 0;
+        bottom: 50px;
+        li{
+            display: inline-block;
+            margin-left: 3px;
+            margin-right: 3px;
+            &.slick-active{
+                button{
+                   background-color: $aqua;  
+                    }              
+                }
+            button{
+                border-radius: 50%;
+                background-color: #fff;
+                border: 3px solid $aqua;
+                font-size: 0;
+                width: 19px;
+                height: 19px;
+                cursor: pointer;  
+                outline: none;              
+            }
+        }
+    }
+}
 
 // end slider
